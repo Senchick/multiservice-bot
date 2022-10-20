@@ -9,7 +9,7 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version "$kotlinVersion"
 }
 
-group = 'com.example'
+group = 'io.multiservice-bot'
 version = '1.0'
 
 allprojects {
@@ -26,8 +26,6 @@ allprojects {
     }
 
     dependencies {
-        implementation 'io.github.cdimascio:dotenv-kotlin:6.3.1'
-
         implementation "org.jetbrains.exposed:exposed-core:$exposedVersion"
         implementation "org.jetbrains.exposed:exposed-dao:$exposedVersion"
         implementation "org.jetbrains.exposed:exposed-jdbc:$exposedVersion"

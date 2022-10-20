@@ -1,5 +1,7 @@
 package io.microservicebot.vk
 
-fun main() {
+import io.microservicebot.core.init
+
+suspend fun main() = init {
     println("vk")
 }
