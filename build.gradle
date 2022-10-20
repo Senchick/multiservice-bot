@@ -1,0 +1,30 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.7.20'
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+ext {
+    exposedVersion = '0.38.2'
+}
+
+dependencies {
+    implementation 'io.github.cdimascio:dotenv-kotlin:6.3.1'
+
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.7.20'
+    implementation "dev.inmo:tgbotapi:3.2.7"
+
+    implementation "com.zaxxer:HikariCP:5.0.1"
+    implementation "org.postgresql:postgresql:42.4.0"
+    implementation "org.jetbrains.exposed:exposed-core:$exposedVersion"
+    implementation "org.jetbrains.exposed:exposed-dao:$exposedVersion"
+    implementation "org.jetbrains.exposed:exposed-jdbc:$exposedVersion"
+    implementation 'ch.qos.logback:logback-classic:1.2.9'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+}
