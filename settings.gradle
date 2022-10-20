@@ -1,2 +1,2 @@
-rootProject.name = 'MultiserviceBot'
-include ':core', ':discord', ':vk', ':telegram'
+rootProject.name = 'multiservice-bot'
+include 'core', 'discord', 'vk', 'telegram'

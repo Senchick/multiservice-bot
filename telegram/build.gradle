@@ -1,6 +1,4 @@
-plugins {
-    id 'org.jetbrains.kotlin.jvm' version "$kotlinVersion"
-}
+
 
 dependencies {
     implementation project(':core')

@@ -1,5 +1,6 @@
 package io.microservicebot.core
 
-fun core() {
-    println("core")
+object Core {
+    init {
+    }
 }
