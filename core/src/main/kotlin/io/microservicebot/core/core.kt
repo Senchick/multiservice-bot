@@ -14,7 +14,7 @@ class Configuration {
     init {
         Database.connect(
             HikariDataSource(HikariConfig().apply {
-                jdbcUrl  = env["JDBC_URL"]
+                jdbcUrl = env["JDBC_URL"]
                 username = env["DB_USERNAME"]
                 password = env["DB_PASSWORD"]
                 maximumPoolSize = env["DB_POOL_SIZE"].toInt()
@@ -28,4 +28,4 @@ class SafeDotenv(private val env: Dotenv) {
     operator fun get(key: String) = env[key] ?: throw NotFoundException("$key key not found.")
 }
 
-class NotFoundException(message: String): Exception(message)
+class NotFoundException(message: String) : Exception(message)

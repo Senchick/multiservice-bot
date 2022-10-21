@@ -1,8 +1,8 @@
 buildscript {
     ext {
         kotlinVersion = '1.7.20'
+        exposedVersion = '0.38.2'
     }
-
 }
 
 plugins {
@@ -22,13 +22,11 @@ allprojects {
     }
 
     ext {
-        exposedVersion = '0.38.2'
+
     }
 
     dependencies {
         implementation "org.jetbrains.exposed:exposed-core:$exposedVersion"
-        implementation "org.jetbrains.exposed:exposed-dao:$exposedVersion"
-        implementation "org.jetbrains.exposed:exposed-jdbc:$exposedVersion"
 
         implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.7.20'
         implementation 'ch.qos.logback:logback-classic:1.2.9'
