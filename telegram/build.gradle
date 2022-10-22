@@ -1,3 +1,17 @@
+mainClassName = "io.multiservicebot.telegram.MainKt"
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    manifest {
+        attributes 'Main-Class': "$mainClassName"
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it)}
+    }
+}
+
 dependencies {
     implementation project(':core')
     implementation "dev.inmo:tgbotapi:3.2.7"

@@ -9,20 +9,14 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version "$kotlinVersion"
 }
 
-group = 'io.multiservice-bot'
-version = '1.0'
-
 allprojects {
+    apply plugin: "application"
     apply plugin: "org.jetbrains.kotlin.jvm"
 
     repositories {
         google()
         mavenCentral()
         maven { url "https://jitpack.io" }
-    }
-
-    ext {
-
     }
 
     dependencies {
@@ -32,8 +26,6 @@ allprojects {
         implementation 'ch.qos.logback:logback-classic:1.2.9'
     }
 }
-
-
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'

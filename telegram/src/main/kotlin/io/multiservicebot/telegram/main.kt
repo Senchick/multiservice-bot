@@ -1,11 +1,11 @@
-package io.microservicebot.telegram
+package io.multiservicebot.telegram
 
 import dev.inmo.tgbotapi.bot.ktor.telegramBot
 import dev.inmo.tgbotapi.extensions.api.bot.getMe
 import dev.inmo.tgbotapi.extensions.api.send.reply
 import dev.inmo.tgbotapi.extensions.behaviour_builder.buildBehaviourWithLongPolling
 import dev.inmo.tgbotapi.extensions.behaviour_builder.triggers_handling.onCommand
-import io.microservicebot.core.init
+import io.multiservicebot.core.init
 
 suspend fun main() = init {
     val bot = telegramBot(env["TELEGRAM_TOKEN"])

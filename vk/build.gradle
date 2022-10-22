@@ -1,4 +1,17 @@
+mainClassName = "io.multiservicebot.vk.MainKt"
+
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    manifest {
+        attributes 'Main-Class': "$mainClassName"
+    }
+
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it)}
+    }
+}
+
 dependencies {
     implementation project(':core')
-
 }
