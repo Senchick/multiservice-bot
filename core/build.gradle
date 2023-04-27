@@ -6,6 +6,12 @@ dependencies {
 
     implementation "com.zaxxer:HikariCP:5.0.1"
 
-    implementation "org.postgresql:postgresql:42.4.0"
+    implementation 'org.postgresql:postgresql:42.4.3'
+
+    implementation "io.ktor:ktor-client-core:$ktorVersion"
+    implementation "io.ktor:ktor-client-cio:$ktorVersion"
+    implementation "io.ktor:ktor-client-logging-jvm:$ktorVersion"
+    implementation "io.ktor:ktor-client-serialization:$ktorVersion"
+    implementation "io.ktor:ktor-client-json:$ktorVersion"
 }
 
